@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <div class="first-section" style="height: 100vh;">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">ABHIRAM KIDAMBI</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                       
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/abhiramkidambi/" target="_blank"><i class="fab fa-linkedin fa-1x" style="font-size: 25px;"></i></a>
+                        <a href="https://github.com/bluesinkers" target="_blank"><i class="fab fa-github fa-1x" style="font-size: 25px;"></i></a>
+                        <a href="mailto:akidamb1@terpmail.umd.edu?subject=Contacting%20you%20from%20Website" target="_blank"><i class="fas fa-envelope fa-1x" style="font-size: 25px;"></i></a>
+                        <a href="https://www.instagram.com/bluesyncers/" target="_blank"><i class="fab fa-instagram fa-1x" style="font-size: 25px;"></i></a>
+                       <a href="https://www.quora.com/profile/Abhiram-Kidambi-1" target="_blank"><i class="fab fa-quora fa-1x" style="font-size: 25px;"></i></a>
+                       <a href="https://www.tiktok.com/@tutorking99" target="_blank"><i class="fab fa-tiktok fa-1x" style="font-size: 25px;"></i></a>
+                    </div>
+                </div>
+                 </nav>
+            </header>
+    <div class="alert alert-warning warning-banner mb-0 d-block d-md-none" role="alert">
+            <strong>Warning!</strong> This site is not optimized for mobile devices.
+    </div>
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <!-- EDIT ml-5 that way its responsive please -->
+             
+            <div class="intro-banner col-md-6 d-flex align-items-start text-white mt-4 ml-5 p-2">
+                <div class="p-2">
+                    <h1 class="welcome-text display-4" id="cycle-text1">Hello, World!</h1>
+                    <p class="welcome-para lead">Welcome to Abhiram Kidambi's Site! To find more information about me, check out the <a href="#about">About Me</a> section. Some information you  might want to know:
+                        <ol>
+                            <li class="welcome-bullet lead"> Site isn't responsive (mobile-usable) just yet -- I am working on that!</li>
+                            <li class="welcome-bullet lead"> Some headers will change languages based on languages I am learning/fluent in. Toggle that off below!</li>
+                            <li class="welcome-bullet lead"> The photo in the back is me dunking a basketball! Hover over the below button to see it better!</li>
+                        </ol>
+                        <button id="hover-here" class="btn btn-light text-dark mr-2" style="border: 2px solid black;">HOVER FOR ME DUNKING!</button>
+                        <button id="language-toggle" class="btn btn-light text-dark ml-2" style="border: 2px solid black;">CLICK FOR LANGUAGE OFF!</button>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="banner section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="images/profile.jpg" alt="Your Photo" class="img-fluid img-profile">
+                </div>
+                <div class="col-md-8 banner-text">
+                    <h1 class="mt-4"><b id="cycle-text2">Hi, I'm Abhi!</b> </h1>
+                    <p>My full name is Abhiram Kidambi, and I'm a UMD sophomore pursuing CS and Applied Math with interests in:</p>
+                    <ul>
+                        <li>Computer Vision (particularly as it pertains to object detection and pose estimation)</li>
+                        <li>Robotics</li>
+                        <li>Software Engineering</li>
+                        <li>Cloud Computing</li>
+                    </ul>
+                    <p>Some hobbies of mine include:</p>
+                    <ul>
+                        <li>Playing/watching basketball (and other sports)</li>
+                        <li>Travelling + learning about different languages/cultures</li>
+                        <li>Geography/Geopolitics</li>
+                        <li>Blogging and teaching others</li>
+                    </ul>
+                    <p>Please check out the Projects and Blog sections to learn more about me and my interests! Visit the Contact section to shoot me a message -- I'm happy to talk about anything! The photo of me to the left 
+                        is me in front of some Cherry Blossoms in an SW Hoodie! <a href="#projects"> Scroll down to see projects!</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <section class="light" id="projects">
+        <div class="container py-2">
+            <div class="h1 text-center text-dark mb-2 mt-3" id="pageHeaderTitle"><b>Projects</b></div>
+            <div class="text-center text-dark mb-3" style="font-size: 17pt;"> Here are some PERSONAL projects of mine that I have completed. As of now, I have added 5 projects in the 
+                current site. Please read the blog-posts to learn more, and feel free to <a href="#contact"> contact me </a>  if you have any questions or want to discuss anything.
+            </div>
+            <hr class="custom-line">
+            <article class="postcard light blue"  id="scroll-here">
+                <a class="postcard__img_link">
+                    <img class="postcard__img" src="https://i.pinimg.com/736x/0a/99/aa/0a99aaba34b5bf7f968e866305d66091--html-code.jpg" alt="Image Title" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <h1 class="postcard__title blue"><a href="#">This Site + My Blog</a></h1>
+                    <div class="postcard__subtitle small">
+                         HTML, Javscript, CSS, React, MongoDB, Express.js, Node.js, Bootstrap, and Gatsby
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">This site is a project of mine using HTML, JavaScript, and CSS along with Gatsby, React, and 
+                        Bootstrap. A version of this site using the MERN (MongoDB, Express.js, React, and Node.js) stack can be found on my Github. Some older versions
+                        that were less responsive can also be found on my blog and Github. I've also completed other web-dev projects including <a href="https://www.charettediv.org/" class="link_override"> this website </a> for the Charette USNSCC Division. 
+                        Read more about the personal touches in this blog! <br> <b> TLDR: various web-dev projects you can find on my Github</b></div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fab fa-github mr-2"></i>Github</li>  
+                        <li class="tag__item"> 📝 Blog Post</li>
+                    </ul>
+                </div>
+            </article>
+            
+            <div class="button-container">
+            <button class="see-more-button" id="toggle-view-button" >See 4 More Projects</button>
+            </div>
+           
+           
+            <div id="toggle-content" style="display: none;">
+                <article class="postcard light red">
+                    <a class="postcard__img_link">
+                        <img class="postcard__img" src="https://svitla.com/uploads/0/3084-computer_vision_main.jpg?1573565447" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                        <h1 class="postcard__title blue"><a href="#">Mathematics of Computer Vision</a></h1>
+                        <div class="postcard__subtitle small">
+                             Python, OpenCV, Numpy, Pandas, Latex, Matlab
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">This project is an educational resource for learning Computer Vision consisting of 60+ pages of TexEd up notes and 10 Python Demos (Documented Jupyter
+                            Notebooks). These notes were presented at various FTC robotics conferences. Some relevant topics covered include the PnP Model, object detection, facial recognition,
+                        digital signals processing, image compression, and CNNs/Deep-Learning. Please read the README on the Github 
+                        Repository before the notes! <br> <b> TLDR: textbook-style notes written in Latex about CV + demos </b>
+                        <ul class="postcard__tagbox">
+                            <li class="tag__item"><i class="fab fa-github mr-2"></i>Github</li>  
+                            <li class="tag__item"> 📝 Blog Post</li>
+                            <li class="tag__item play blue">
+                                <a href="#"> ✍️ Access Notes </a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="postcard light green">
+                    <a class="postcard__img_link">
+                        <img class="postcard__img" src="https://th.bing.com/th/id/OIP.V85VETBNvAP0qZh-odVMKQHaDr?rs=1&pid=ImgDetMain" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                        <h1 class="postcard__title blue"><a href="#">Sparsity</a></h1>
+                        <div class="postcard__subtitle small">
+                             C, C++, Python
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">This project contains implementations of Compressed Sparse Row Matrix representation (CSR), various matrix methods (multiplication, QR/LU/Cholesky Decomposition, etc),
+                            a Collaborative-Filtering scheme using my implementation of CSR (prediction scheme for content used by platforms like Netflix). It's implemented in C and has comparable run-times to similar functionalities
+                            of <i>scipy.sparse</i>, Python's standard module for sparse matrices. It is inspired by Dr. Bahar Asgari's PhD Thesis. <br> <b> TLDR: library written in C wrapped with Python for sparse data</b>
+                        <ul class="postcard__tagbox">
+                            <li class="tag__item"><i class="fab fa-github mr-2"></i>Github</li>  
+                            <li class="tag__item"> 📝 Blog Post</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="postcard light yellow">
+                    <a class="postcard__img_link">
+                        <img class="postcard__img" src="https://miro.medium.com/max/1200/1*bysq0FSM8eN6z2bBUKoEcA.jpeg" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                        <h1 class="postcard__title blue"><a href="#">Human Security Detector</a></h1>
+                        <div class="postcard__subtitle small">
+                             Python, YOLO, PyTorch, TKinter
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">Human  Detector uses your webcam to monitor for unauthorized access of your computer. 
+                            When a person is detected, it prompts for a password and, if not entered, triggers an alarm, takes a photo, and can initiate other configurable actions like shutting down the computer. 
+                            It uses a trained-version of the YOLO Object Detection System and contains thoroughly documented code on use/design of the YOLO Architecture! <br> <b> TLDR: human security detector with alarm, password, and other features</b>
+                        <ul class="postcard__tagbox">
+                            <li class="tag__item"> <i class="fab fa-github mr-2"></i>Github</li>  
+                            <li class="tag__item"> 📝 Blog Post</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="postcard light red">
+                    <a class="postcard__img_link">
+                        <img class="postcard__img" src="https://raw.githubusercontent.com/tejaslodaya/car-detection-yolo/master/nb_images/prediction_output.jpg" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                        <h1 class="postcard__title blue"><a href="#">Vehicle Type Detector</a></h1>
+                        <div class="postcard__subtitle small">
+                             Python, YOLO, PyTorch, Scikit-Learn, Pandas, Numpy
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">This project is a vehicle-classifier which classifies vehicles into multiple different categories
+                            based on images. It will be used in the future to analyze videos of vehicles and assess their speed and construct a "safety-score" on how the drivers
+                            are supposedly driving. It is intended to be a deep-learning based tools for traffic-cameras to learn and comment more about vehicles.
+                             <br> <b> TLDR: vehicle detector for analyzing cars/vechiles and traffic cameras</b>
+                        <ul class="postcard__tagbox">
+                            <li class="tag__item"><i class="fab fa-github mr-2"></i>Github</li>  
+                            <li class="tag__item"> 📝 Blog Post</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+            <div class="button-container">
+                <button class="see-more-button" id="toggle-close-button" style="display: none;">See Less Projects</button>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <div class="last-section" id="contact">
+        <div class="transparency container-fluid p-2" id="contactbanner" style="width: 100%;">
+            <div class="h1 text-center text-dark mb-2 mt-3" id="pageHeaderTitle"> <b>Contact Me!</b>  </div>
+            <div class="text-center text-dark mb-3 mr-5 ml-5" style="font-size: 14pt;"> <b> If you are an employer contacting me, please connect through LinkedIn or my Email. </b> If you want to check out other
+                social media of mine,       please feel free to access the other icons. Read more about my social media and contacting me below!
+            </div> 
+            <div class="social-icons text-center">
+                <a href="https://www.linkedin.com/in/abhiramkidambi/" target="_blank"><i class="fab fa-linkedin fa-1x" style="font-size: 25px;"></i></a>
+                        <a href="https://github.com/bluesinkers" target="_blank"><i class="fab fa-github fa-1x" style="font-size: 25px;"></i></a>
+                        <a href="mailto:akidamb1@terpmail.umd.edu?subject=Contacting%20you%20from%20Website" target="_blank"><i class="fas fa-envelope fa-1x" style="font-size: 25px;"></i></a>
+                        <a href="https://www.instagram.com/bluesyncers/" target="_blank"><i class="fab fa-instagram fa-1x" style="font-size: 25px;"></i></a>
+                       <a href="https://www.quora.com/profile/Abhiram-Kidambi-1" target="_blank"><i class="fab fa-quora fa-1x" style="font-size: 25px;"></i></a>
+                       <a href="https://www.tiktok.com/@tutorking99" target="_blank"><i class="fab fa-tiktok fa-1x" style="font-size: 25px;"></i></a>
+                
+                
+            
+            
+            
+            </div>
+        </div>
+        
+
+    <div class="container"  >
+        
+        <div class="row no-gutters">
+            <!-- EDIT ml-5 that way its responsive please -->
+             
+            <div class="container">
+                <div class="row">
+                    <div class="ending-banner col-md-6 ml-auto d-flex align-items-start text-white mr-4 mt-4 p-2">
+                        <div class="p-2">
+                            <h1 class="welcome-text display-4" id="cycle-text3">See ya!</h1>
+                            <p class="welcome-para lead">
+                                <ol>
+                                    <li class="welcome-bullet lead">My TikTok and Quora are personal but have (mostly) educational content! Follow me!</li>
+                                    <li class="welcome-bullet lead">The photo in the back is (also) me dunking a basketball! Hover over the below button to see it better!</li>
+                                </ol>
+                                <button id="hover-here-2" class="btn btn-light text-dark" style="border: 2px solid black;">ME DUNKING!</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    
+</div>
+<footer class="footer bg-light text-dark text-center p-1 m-0">
+    <p> Copyright &copy;2024, All rights reserved | This site is created ENTIRELY by Abhiram Kidambi (with inspiration from referenced sources cited in my Github). </p>
+</footer>
+
+
+
+
+      
+
+    
+
+
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
