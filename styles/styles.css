@@ -61,6 +61,11 @@ a {
 .social-icons a {
   color: #000;
   margin-left: 0.75rem;
+  font-weight: normal !important;
+}
+
+.no-bold {
+  font-weight: normal !important;
 }
 
 .social-icons a:hover {

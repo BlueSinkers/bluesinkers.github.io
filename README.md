@@ -9,7 +9,7 @@ Yes, my beautiful website has a lot of flaws... here is a to-do list of some thi
 1. Make the website responsive. The non-card sections of the website aren't responsive and I plan to fix that over the coming months. This is by far the most important thing on the to-do list.
 2. Make the linearity of the website make more sense. I discuss this in the older version of my site which you can find [here](https://github.com/BlueSinkers/website-old-version) but it still feels not very convincing that the order of progression through the site is downward.
 3. Change the color-scheme -- as a colorblind individual, I'm not too sure if it looks ok, but it feels very black-and-white and I want to add some more color to the site. Although, it is very characteristic of me to have a weird-color-scheme given what I just said, so I will see about this.
-3. Mmake the background "dunking" pictures .gif files so when the button is hovered, they will show a moving slow-motion dunk.
+3. Make the background "dunking" pictures .gif files so when the button is hovered, they will show a moving slow-motion dunk.
 
 ## Some lessons I learned while making this site:
 1. KISS (Keep it Simple Stupid)
