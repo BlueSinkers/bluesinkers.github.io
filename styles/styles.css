@@ -124,6 +124,10 @@ a {
   text-align: center;
 }
 
+.fullheight {
+  height: 100vh;
+}
+
 .custom-col {
   flex: 0 0 75%;
 }
@@ -146,13 +150,14 @@ a {
   text-align: left;
 }
 
-.banner {
+.banner-second {
   background-color: rgb(220, 235, 238); /* Light background color for the banner */
   height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center; /* Center content vertically */
   color: #333; /* Text color */
   padding: 1.5rem;
+  color: black;
 }
 
 .banner-text {
@@ -523,6 +528,17 @@ html, body {
 
 .transparency {
   background: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (min-width: 764px) {
+  .banner-second {
+    height: 100vh; /* Full viewport height on larger screens */
+  }
+}
+@media screen and (max-width: 763px) {
+  .banner-second {
+    height: auto; /* Adjust height to fit content on smaller screens */
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
