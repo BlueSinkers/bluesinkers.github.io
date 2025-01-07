@@ -71,7 +71,7 @@ document.getElementById('language-toggle').addEventListener('click', function() 
     }
 });
 
-function typeText(element, text, index = 0, currentText = '', typingDirection = true, callback) {
+function typeText(element1, element2, element3, text, index = 0, currentText = '', typingDirection = true, callback) {
     // Add cursor element at the end of the text
     const cursor = document.createElement('span');
     cursor.textContent = '|';
@@ -82,8 +82,8 @@ function typeText(element, text, index = 0, currentText = '', typingDirection = 
 
     // Function to update the text with cursor at the end
     function updateTextWithCursor() {
-        element.textContent = currentText;
-        element.appendChild(cursor); // Always append the cursor at the end
+        element1.textContent = currentText;
+        element1.appendChild(cursor); // Always append the cursor at the end
     }
 
     // Function to check if a character is part of the Latin alphabet
@@ -102,20 +102,20 @@ function typeText(element, text, index = 0, currentText = '', typingDirection = 
                 // Correct the typo
                 currentText = currentText.slice(0, -1) + charToType; // Remove typo and add the correct character
                 updateTextWithCursor(); // Update text with the corrected character
-                setTimeout(() => typeText(element, text, index + 1, currentText, typingDirection, callback), getRandomNormal(120, 15));
+                setTimeout(() => typeText(element1, element2, element3, text, index + 1, currentText, typingDirection, callback), getRandomNormal(120, 15));
             }, getRandomNormal(typingSpeed, typingstd)); // Typo correction delay 
         } else {
             currentText += charToType;
             updateTextWithCursor(); // Update text with the character and cursor
 
-            setTimeout(() => typeText(element, text, index + 1, currentText, typingDirection, callback), getRandomNormal(typingSpeed, typingstd));
+            setTimeout(() => typeText(element1, element2, element3, text, index + 1, currentText, typingDirection, callback), getRandomNormal(typingSpeed, typingstd));
         }
     } else if (typingDirection) {
         // After typing is complete, remove the cursor and start erasing
         cursor.style.display = 'none'; // Hide the cursor
         let timer_id = setInterval(toggleCursor, 700);
         // After typing, start erasing immediately
-        setTimeout(() => eraseText(element, text, currentText, callback, timer_id), 2500); // No pause before erasing
+        setTimeout(() => eraseText(element1, text, currentText, callback, timer_id), 2500); // No pause before erasing
     }
 }
 
@@ -160,7 +160,7 @@ function cycleText() {
     // Proceed only if language_toggle is 1
     if (language_toggle === 1) {
         // Type the first text for element1
-        typeText(element1, texts_intro[curr], 0, '', true, () => {
+        typeText(element1, element2, element3, texts_intro[curr], 0, '', true, () => {
             // Once the typing is done, just move to the next language
             curr = (curr + 1) % texts_intro.length;  // Cycle through languages
             cycleText();  // Continue the cycle
