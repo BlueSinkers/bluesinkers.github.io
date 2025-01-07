@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing and Backward Typing Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .typing-container {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        .typing-text {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 3px solid #333;
+            padding-right: 5px;
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: #333;
+            width: 3px;
+            height: 100%;
+            animation: blink 0.7s step-end infinite;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="typing-container">
+        <div class="typing-text" id="typingText"></div>
+        <div class="cursor"></div>
+    </div>
+
+    <script>
+        const phrases = [
+            "Hello, World! I'm Abhi! See ya!",
+            "Hola, mundo! Soy Abhi! Nos vemos!",
+            "హలో వరల్డ్! హాయ్, నేను అభి! వీడ్కోలు!",
+            "مرحباً بعالم! أنا إسمي أبي! مع السلامة!",
+            "Salut, monde! Je suis Abhi! Au revoir!"
+        ];
+        let currentPhraseIndex = 0;
+        let index = 0;
+        let typingDirection = true;  // true for typing, false for erasing
+        let currentText = "";
+
+        // Typing and erasing speeds based on 130-140 wpm (~450ms per character)
+        const typingSpeed = 90;  // Typing speed (ms per character)
+        const erasingSpeed = 40; // Erasing speed (ms per character, faster than typing)
+
+        // Function to simulate realistic typos in Latin script
+        function simulateTypo(char) {
+            const typoChance = 1 / 10; // 1/100 chance for a typo
+            if (Math.random() < typoChance) {
+                // Typo: pick a random character close to the intended one on the keyboard
+                const randomChars = 'qwertyuiopasdfghjklzxcvbnm';
+                const randomChar = randomChars[Math.floor(Math.random() * randomChars.length)];
+                return randomChar;
+            }
+            return char; // No typo
+        }
+
+        function typeText() {
+            const text = phrases[currentPhraseIndex]; // Get the current phrase
+
+            if (typingDirection) {
+                // Typing forward
+                if (index < text.length) {
+                    let charToType = text.charAt(index);
+
+                    // If the phrase uses Latin script, simulate typo
+                    if (/[a-zA-Z]/.test(charToType)) {
+                        charToType = simulateTypo(charToType);
+                    }
+
+                    currentText += charToType;
+                    document.getElementById("typingText").innerHTML = currentText;
+
+                    // If a typo was made, delay before deleting it and replacing with the correct character
+                    if (charToType !== text.charAt(index)) {
+                        setTimeout(() => {
+                            currentText = currentText.slice(0, -1); // Delete the typo
+                            document.getElementById("typingText").innerHTML = currentText;
+                            setTimeout(() => {
+                                currentText += text.charAt(index); // Add the correct character
+                                document.getElementById("typingText").innerHTML = currentText;
+                                index++;
+                                setTimeout(typeText, typingSpeed);  // Adjust typing speed here (ms)
+                            }, typingSpeed);
+                        }, typingSpeed);
+                    } else {
+                        index++;
+                        setTimeout(typeText, typingSpeed);  // Adjust typing speed here (ms)
+                    }
+                } else {
+                    // When typing is done, start erasing
+                    typingDirection = false;
+                    setTimeout(typeText, 1000);  // Wait a moment before erasing
+                }
+            } else {
+                // Erasing backward
+                if (index > 0) {
+                    currentText = currentText.slice(0, -1);
+                    document.getElementById("typingText").innerHTML = currentText;
+                    index--;
+                    setTimeout(typeText, erasingSpeed);  // Adjust erasing speed here (ms)
+                } else {
+                    // Once done erasing, move to the next phrase
+                    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+                    typingDirection = true; // Start typing the next phrase
+                    setTimeout(typeText, 1000);  // Wait a moment before typing again
+                }
+            }
+        }
+
+        typeText(); // Start typing and erasing loop
+    </script>
+
+</body>
+</html>

@@ -627,3 +627,14 @@ html, body {
     margin: 8px;
   }
 }
+
+.enforce-height {
+ // font-size: 16px; /* Set font size */
+  height: 1.5em !important; 
+}
+
+#cycle-text1 {
+  display: inline-block !important;
+  position: relative !important;
+}
+
