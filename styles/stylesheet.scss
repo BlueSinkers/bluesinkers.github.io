@@ -638,3 +638,6 @@ html, body {
   position: relative !important;
 }
 
+.intro-banner, #contactbanner, .ending-banner {
+  transition: background-color .4s ease; /* Gradual transition over 2 seconds */
+}

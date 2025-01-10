@@ -559,4 +559,8 @@ html, body {
   position: relative !important;
 }
 
+.intro-banner, #contactbanner, .ending-banner {
+  transition: background-color 0.4s ease; /* Gradual transition over 2 seconds */
+}
+
 /*# sourceMappingURL=styles.css.map */
